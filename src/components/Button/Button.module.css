@@ -1,0 +1,39 @@
+.Button {
+    border-radius: 15px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.size-m {
+    width: 80px;
+    font-size: 15px;
+}
+
+.size-l {
+    width: 100px;
+    font-size: 20px;
+}
+
+.size-xl {
+    width: 150px;
+    font-size: 20px;
+}
+
+
+.outline{
+    background: transparent;
+    color: black;
+    border: 1px black solid;
+}
+.clear{
+
+}
+.background{
+    color: white;
+    background: rgb(179,121,255);
+    background: linear-gradient(90deg, rgba(179,121,255,1) 0%, rgba(109,39,200,1) 100%);
+}

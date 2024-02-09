@@ -1,0 +1,15 @@
+.Footer {
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials img {
+    width: 60px;
+    height: 60px;
+}
