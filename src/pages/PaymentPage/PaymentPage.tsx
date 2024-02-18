@@ -65,7 +65,7 @@ const PaymentPage = () => {
 
   useEffect(() => {
     tg.MainButton.setParams({
-      text: "send data",
+      text: "Send Data",
     });
   }, []);
 
@@ -98,6 +98,7 @@ const PaymentPage = () => {
         flexDirection: "column",
         width: "100%",
         alignItems: "center",
+        background: "var(--tg-theme-bg-color)",
       }}
     >
       <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
@@ -109,14 +110,17 @@ const PaymentPage = () => {
       <InputFormWrapper
         onChange={onChangePostcode}
         title="Post code"
+        type="number"
       ></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangePhoneNumber}
         title="Phone number"
+        type="number"
       ></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangeEmail}
         title="Email"
+        type="email"
       ></InputFormWrapper>
     </div>
   );
