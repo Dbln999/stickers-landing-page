@@ -3,6 +3,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 interface Form {
   name?: string;
   city?: string;
+  country?: string;
   address?: string;
   postcode?: string;
   phoneNumber?: string;
@@ -17,6 +18,7 @@ const initialState: FormSchema = {
   form: {
     name: "",
     city: "",
+    country: "",
     address: "",
     postcode: "",
     phoneNumber: "",

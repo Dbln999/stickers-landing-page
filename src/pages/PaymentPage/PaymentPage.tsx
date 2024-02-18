@@ -15,6 +15,13 @@ const PaymentPage = () => {
     [dispatch]
   );
 
+  const onChangeCountry = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ country: value || "" }));
+    },
+    [dispatch]
+  );
+
   const onChangeName = useCallback(
     (value?: string) => {
       dispatch(formActions.updateForm({ name: value || "" }));
@@ -76,6 +83,7 @@ const PaymentPage = () => {
       !form.phoneNumber ||
       !form.postcode ||
       !form.address ||
+      !form.country ||
       !form.city
     ) {
       tg.MainButton.hide();
@@ -103,7 +111,7 @@ const PaymentPage = () => {
     >
       <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
       <InputFormWrapper
-        onChange={onChangeName}
+        onChange={onChangeCountry}
         title="Country"
       ></InputFormWrapper>
       <InputFormWrapper onChange={onChangeCity} title="City"></InputFormWrapper>
