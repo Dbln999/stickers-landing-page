@@ -102,6 +102,10 @@ const PaymentPage = () => {
       }}
     >
       <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
+      <InputFormWrapper
+        onChange={onChangeName}
+        title="Country"
+      ></InputFormWrapper>
       <InputFormWrapper onChange={onChangeCity} title="City"></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangeAddress}
