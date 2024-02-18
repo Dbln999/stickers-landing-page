@@ -1,0 +1,137 @@
+import { useCallback, useEffect } from "react";
+import { InputFormWrapper } from "../../components/InputFormWrapper/InputFormWrapper.tsx";
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+} from "../../components/Button/Button.tsx";
+import { useTelegram } from "../../hooks/useTelegram.ts";
+import { formActions } from "../../store/formSlice/formSlice.ts";
+import { useAppDispatch, useAppSelector } from "../../store/store.ts";
+
+const PaymentPage = () => {
+  const { tg } = useTelegram();
+  const dispatch = useAppDispatch();
+
+  const onChangeCity = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ city: value || "" }));
+    },
+    [dispatch]
+  );
+
+  const onChangeName = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ name: value || "" }));
+    },
+    [dispatch]
+  );
+
+  const onChangeAddress = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ address: value || "" }));
+    },
+    [dispatch]
+  );
+
+  const onChangePostcode = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ postcode: value || "" }));
+    },
+    [dispatch]
+  );
+
+  const onChangePhoneNumber = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ phoneNumber: value || "" }));
+    },
+    [dispatch]
+  );
+
+  const onChangeEmail = useCallback(
+    (value?: string) => {
+      dispatch(formActions.updateForm({ email: value || "" }));
+    },
+    [dispatch]
+  );
+
+  const form = useAppSelector((state) => state.form?.form);
+
+  const onSendData = useCallback(() => {
+    tg.sendData(JSON.stringify(form));
+  }, [form]);
+
+  useEffect(() => {
+    tg.onEvent("mainButtonClicked", onSendData);
+    return () => {
+      tg.offEvent("mainButtonClicked", onSendData);
+    };
+  }, [onSendData]);
+
+  useEffect(() => {
+    tg.MainButton.setParams({
+      text: "send data",
+    });
+  }, []);
+
+  useEffect(() => {
+    if (
+      !form?.name ||
+      !form.email ||
+      !form.phoneNumber ||
+      !form.postcode ||
+      !form.address ||
+      !form.city
+    ) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+    }
+  }, [
+    form?.name,
+    form.email,
+    form.phoneNumber,
+    form.postcode,
+    form.address,
+    form.city,
+  ]);
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        alignItems: "center",
+      }}
+    >
+      <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
+      <InputFormWrapper onChange={onChangeCity} title="City"></InputFormWrapper>
+      <InputFormWrapper
+        onChange={onChangeAddress}
+        title="Address"
+      ></InputFormWrapper>
+      <InputFormWrapper
+        onChange={onChangePostcode}
+        title="Post code"
+      ></InputFormWrapper>
+      <InputFormWrapper
+        onChange={onChangePhoneNumber}
+        title="Phone number"
+      ></InputFormWrapper>
+      <InputFormWrapper
+        onChange={onChangeEmail}
+        title="Email"
+      ></InputFormWrapper>
+      <Button
+        size={ButtonSize.XL}
+        style={{ marginTop: "50px" }}
+        theme={ButtonTheme.BACKGROUND}
+      >
+        Send data
+      </Button>
+    </div>
+  );
+};
+
+export default PaymentPage;
