@@ -1,10 +1,5 @@
 import { useCallback, useEffect } from "react";
 import { InputFormWrapper } from "../../components/InputFormWrapper/InputFormWrapper.tsx";
-import {
-  Button,
-  ButtonSize,
-  ButtonTheme,
-} from "../../components/Button/Button.tsx";
 import { useTelegram } from "../../hooks/useTelegram.ts";
 import { formActions } from "../../store/formSlice/formSlice.ts";
 import { useAppDispatch, useAppSelector } from "../../store/store.ts";
@@ -123,13 +118,6 @@ const PaymentPage = () => {
         onChange={onChangeEmail}
         title="Email"
       ></InputFormWrapper>
-      <Button
-        size={ButtonSize.XL}
-        style={{ marginTop: "50px" }}
-        theme={ButtonTheme.BACKGROUND}
-      >
-        Send data
-      </Button>
     </div>
   );
 };
