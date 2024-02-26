@@ -4,11 +4,18 @@ import { Footer } from "../widget/Footer/Footer.tsx";
 
 const MainPage = () => {
   return (
-    <>
+    <section
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Header></Header>
       <MainContent></MainContent>
       <Footer></Footer>
-    </>
+    </section>
   );
 };
 

@@ -14,7 +14,7 @@ interface FooterProps {
 export const Footer = memo(({ className }: FooterProps) => {
   return (
     <section className={classNames(cls.Footer, {}, [className])}>
-      <img src={Logo} alt="" />
+      <img className={cls.logo} src={Logo} alt="" />
       <div className={cls.socials}>
         <img src={Facebook} alt="" />
         <img src={Instagram} alt="" />

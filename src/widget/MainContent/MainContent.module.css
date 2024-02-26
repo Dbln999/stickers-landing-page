@@ -1,5 +1,6 @@
 .MainContent {
-    padding: 150px;
+    width: 80%;
+    /*padding: 150px;*/
     display: flex;
 }
 
@@ -42,10 +43,9 @@
 
 .brand {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    width: 550px;
-    margin-left: 210px;
+    width: 60%;
 }
 
 .btnContainer {
@@ -57,4 +57,30 @@
 
 .btnContainer button {
     border-radius: 8px;
+}
+
+@media only screen and (max-width: 900px) {
+    .MainContent {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .brand {
+        justify-content: center;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+    .btnContainer {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .phrase{
+        width: 350px;
+    }
+    .info {
+        width: 350px;
+    }
 }
