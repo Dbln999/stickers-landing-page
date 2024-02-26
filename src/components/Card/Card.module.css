@@ -1,0 +1,62 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px #9747FF solid;
+}
+
+.title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    margin: 15px 0;
+}
+.text {
+    font-family: "Overlock", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1900px) {
+    .Card {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1670px) {
+    .Card {
+        width: 250px;
+    }
+    .text {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 1460px) {
+    .Card {
+        width: 200px;
+    }
+    .text {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .Card {
+        width: 350px;
+    }
+    .text {
+        font-size: 24px;
+    }
+}

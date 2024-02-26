@@ -13,9 +13,9 @@ const Header = () => {
           className={cls.logo}
         />
         <div>
-          <p>Stickerize</p>
-          <p>About</p>
-          <p>Support</p>
+          <p onClick={() => navigate("/stickerize")}>Stickerize</p>
+          <p onClick={() => navigate("/about")}>About</p>
+          <p onClick={() => navigate("/support")}>Support</p>
         </div>
       </section>
     </header>
