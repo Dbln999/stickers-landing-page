@@ -1,25 +1,39 @@
 import Logo from "../../assets/Logo.svg";
 import cls from "./Header.module.css";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import Facebook from "../../assets/Facebook.svg";
+import Instagram from "../../assets/Instagram.svg";
+import TikTok from "../../assets/TikTok.svg";
+import YouTube from "../../assets/YouTube.svg";
+import LinkedIn from "../../assets/LinkedIn.svg";
+
 const Header = () => {
-  const navigate = useNavigate();
-  return (
-    <header className={cls.Header}>
-      <section className={cls.overlay}>
-        <img
-          src={Logo}
-          alt=""
-          onClick={() => navigate("/")}
-          className={cls.logo}
-        />
-        <div>
-          <p onClick={() => navigate("/stickerize")}>Stickerize</p>
-          <p onClick={() => navigate("/about")}>About</p>
-          <p onClick={() => navigate("/support")}>Support</p>
-        </div>
-      </section>
-    </header>
-  );
+    const navigate = useNavigate();
+    return (
+        <header className={cls.Header}>
+            <section className={cls.overlay}>
+                <img
+                    src={Logo as String}
+                    alt=""
+                    onClick={() => navigate("/")}
+                    className={cls.logo}
+                />
+                <div className={cls.container}>
+                    <div className={cls.socials}>
+                        <img src={Facebook as String} alt=""/>
+                        <img src={Instagram as String} alt=""/>
+                        <img src={TikTok as String} alt=""/>
+                        <img src={YouTube as String} alt=""/>
+                        <img src={LinkedIn as String} alt=""/>
+                    </div>
+                    <div className={cls.links}>
+                        <p>Why us?</p>
+                        <p>Contact</p>
+                    </div>
+                </div>
+            </section>
+        </header>
+    );
 };
 
 export default Header;

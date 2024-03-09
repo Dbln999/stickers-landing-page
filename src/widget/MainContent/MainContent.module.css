@@ -1,11 +1,11 @@
 .MainContent {
-    width: 80%;
-    /*padding: 150px;*/
+    width: 85%;
     display: flex;
+    margin-top: 50px;
 }
 
 .info {
-    width: 450px;
+    width: 550px;
     margin-top: 60px;
 }
 
@@ -13,18 +13,25 @@
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .phrase{
     width: 500px;
-    margin-top: 50px;
+    color: white;
+    font-size: 50px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
 
 .point {
     display: flex;
     width: 250px;
+    margin: 5px 0;
     justify-content: start;
     align-items: center;
 }
@@ -39,6 +46,7 @@
     font-weight: 400;
     font-style: normal;
     margin: 3px;
+    color: white;
 }
 
 .brand {
@@ -52,27 +60,65 @@
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 400px;
 }
 
 .btnContainer button {
     border-radius: 8px;
 }
 
+.tgLogo {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%) translateY(-60%);
+    width: 350px;
+    top:50%;
+}
+
+@media only screen and (max-width: 1475px){
+    .tgLogo {
+        width: 250px;
+    }
+    .phrase {
+        width: 400px;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .tgLogo {
+        width: 150px;
+    }
+    .phrase {
+        width: 350px;
+        font-size: 50px;
+    }
+}
+
 @media only screen and (max-width: 900px) {
+    .phrase {
+        width: 500px;
+        font-size: 45px;
+        margin-right: 0;
+    }
     .MainContent {
         flex-direction: column-reverse;
         align-items: center;
     }
     .brand {
+        width: 100%;
         justify-content: center;
     }
     .info {
+        width: 90%;
         display: flex;
         flex-direction: column;
     }
     .btnContainer {
         align-self: center;
+    }
+    .tgLogo {
+        display: none;
     }
 }
 
