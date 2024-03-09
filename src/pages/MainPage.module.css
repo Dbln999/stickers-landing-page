@@ -7,7 +7,7 @@
 .bgBlack {
     width: 50%;
     position: absolute;
-    height: 100%;
+    height: 120%;
     left:0;
     z-index: -10;
     background: linear-gradient(180deg, rgba(49,49,49,1) 0%, rgba(0,0,0,1) 100%);
@@ -16,7 +16,7 @@
 .bgPurple {
     width: 50%;
     position: absolute;
-    height: 100%;
+    height: 120%;
     right:0;
     z-index: -10;
     background: linear-gradient(180deg, rgba(179,121,255,1) 0%, rgba(109,39,200,1) 100%);
