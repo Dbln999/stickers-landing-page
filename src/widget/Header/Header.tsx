@@ -13,18 +13,18 @@ const Header = () => {
         <header className={cls.Header}>
             <section className={cls.overlay}>
                 <img
-                    src={Logo as String}
+                    src={Logo as string}
                     alt=""
                     onClick={() => navigate("/")}
                     className={cls.logo}
                 />
                 <div className={cls.container}>
                     <div className={cls.socials}>
-                        <img src={Facebook as String} alt=""/>
-                        <img src={Instagram as String} alt=""/>
-                        <img src={TikTok as String} alt=""/>
-                        <img src={YouTube as String} alt=""/>
-                        <img src={LinkedIn as String} alt=""/>
+                        <img src={Facebook as string} alt=""/>
+                        <img src={Instagram as string} alt=""/>
+                        <img src={TikTok as string} alt=""/>
+                        <img src={YouTube as string} alt=""/>
+                        <img src={LinkedIn as string} alt=""/>
                     </div>
                     <div className={cls.links}>
                         <p>Why us?</p>

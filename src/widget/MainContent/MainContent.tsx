@@ -18,7 +18,7 @@ export const MainContent = memo(({ className }: MainContentProps) => {
               <h1>Express yourself beyond the chat with Telegram stickers you can hold.</h1>
               {points.map((point) => (
                   <div className={cls.point}>
-                      <img src={Star as String} alt=""/>
+                      <img src={Star as string} alt=""/>
                       <p>{point}</p>
                   </div>
               ))}
@@ -29,7 +29,7 @@ export const MainContent = memo(({ className }: MainContentProps) => {
                   <Button theme={ButtonTheme.CLEAR} size={ButtonSize.XL}>How to start?</Button>
               </div>
           </section>
-          <img src={TgLogo as String} className={cls.tgLogo} alt=""/>
+          <img src={TgLogo as string} className={cls.tgLogo} alt=""/>
           <div className={cls.brand}>
               <h1 className={cls.phrase}>Bring Your Telegram Stickers to life.</h1>
           </div>
