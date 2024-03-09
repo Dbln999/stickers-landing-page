@@ -29,7 +29,9 @@ export const MainContent = memo(({ className }: MainContentProps) => {
                   <Button theme={ButtonTheme.CLEAR} size={ButtonSize.XL}>How to start?</Button>
               </div>
           </section>
-          <img src={TgLogo as string} className={cls.tgLogo} alt=""/>
+          <div>
+            <img src={TgLogo as string} className={cls.tgLogo} alt=""/>
+          </div>
           <div className={cls.brand}>
               <h1 className={cls.phrase}>Bring Your Telegram Stickers to life.</h1>
           </div>

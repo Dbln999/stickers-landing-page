@@ -2,6 +2,8 @@
     width: 85%;
     display: flex;
     margin-top: 50px;
+    justify-self: center;
+    align-self: center;
 }
 
 .info {
@@ -70,14 +72,15 @@
 .tgLogo {
     position: absolute;
     left:50%;
-    transform: translateX(-50%) translateY(-60%);
+    transform: translateX(-50%);
     width: 350px;
-    top:50%;
 }
+
 
 @media only screen and (max-width: 1475px){
     .tgLogo {
         width: 250px;
+        margin-top: 100px;
     }
     .phrase {
         width: 400px;
@@ -87,7 +90,7 @@
 
 @media only screen and (max-width: 1200px){
     .tgLogo {
-        width: 150px;
+        width: 200px;
     }
     .phrase {
         width: 350px;
@@ -128,6 +131,7 @@
     }
     .tgLogo {
         width: 200px;
+        margin-top: 0;
     }
 }
 
@@ -140,9 +144,6 @@
     }
     .info h1 {
         width: 350px;
-    }
-    .tgLogo {
-        margin-top: 60px;
     }
     .btnContainer {
         width: 350px;
@@ -159,9 +160,6 @@
     }
     .btnContainer button {
         margin: 10px;
-    }
-    .tgLogo {
-        margin-top: 120px;
     }
     .info h1 {
         width: 250px;
