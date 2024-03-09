@@ -3,11 +3,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-bottom: 40px;
 }
 .bgBlack {
     width: 50%;
     position: absolute;
-    height: 140vh;
+    height:1250px;
     left:0;
     z-index: -10;
     background: linear-gradient(180deg, rgba(49,49,49,1) 0%, rgba(0,0,0,1) 100%);
@@ -16,7 +17,7 @@
 .bgPurple {
     width: 50%;
     position: absolute;
-    height: 140vh;
+    height: 1250px;
     right:0;
     z-index: -10;
     background: linear-gradient(180deg, rgba(179,121,255,1) 0%, rgba(109,39,200,1) 100%);
