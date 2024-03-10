@@ -8,8 +8,8 @@
 .bgBlack {
     width: 50%;
     position: absolute;
-    height:1250px;
     left:0;
+    height: 100%;
     z-index: -10;
     background: linear-gradient(180deg, rgba(49,49,49,1) 0%, rgba(0,0,0,1) 100%);
 }
@@ -17,8 +17,28 @@
 .bgPurple {
     width: 50%;
     position: absolute;
-    height: 1250px;
+    height: 100%;
     right:0;
     z-index: -10;
     background: linear-gradient(180deg, rgba(179,121,255,1) 0%, rgba(109,39,200,1) 100%);
+}
+.wrapper {
+    height: 1000px;
+}
+
+@media only screen and (max-width: 900px) {
+    .bgBlack{
+        height: 1100px;
+    }
+    .bgPurple{
+        height: 1100px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .bgBlack{
+        height: 1300px;
+    }
+    .bgPurple{
+        height: 1300px;
+    }
 }

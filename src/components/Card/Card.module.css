@@ -1,7 +1,6 @@
 .Card {
     display: flex;
     flex-direction: column;
-    width: 350px;
     justify-content: center;
     align-items: center;
     margin: 50px;
@@ -10,23 +9,52 @@
 .image {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
+    /*border: 1px #9747FF solid;*/
+}
+
+.border {
     border: 1px #9747FF solid;
+}
+.rounded {
+    border-radius: 50%;
+}
+.classic {
+    border: 0;
 }
 
 .title {
-    font-family: "Bebas Neue", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 40px;
+    font-size: 32px;
     margin: 15px 0;
 }
 .text {
-    font-family: "Overlock", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
     text-align: center;
+
+}
+
+.standard {
+    font-weight: normal;
+}
+.bold {
+    font-weight: bold;
+}
+
+.standard-size{
+    width: 300px;
+
+}
+.smaller-size {
+    width: 250px;
+}
+
+.smaller-size.image {
+    width: 150px;
+    height: 150px;
 }
 
 @media only screen and (max-width: 1900px) {

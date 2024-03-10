@@ -4,6 +4,7 @@
     margin-top: 50px;
     justify-self: center;
     align-self: center;
+    height: 750px;
 }
 
 .info {
@@ -56,6 +57,7 @@
     justify-content: end;
     align-items: center;
     width: 60%;
+    height: 400px;
 }
 
 .btnContainer {
@@ -78,6 +80,9 @@
 
 
 @media only screen and (max-width: 1475px){
+    .MainContent {
+        height: 700px;
+    }
     .tgLogo {
         width: 250px;
         margin-top: 100px;
@@ -92,6 +97,10 @@
     .tgLogo {
         width: 200px;
     }
+    .MainContent {
+        height: 700px;
+    }
+
     .phrase {
         width: 350px;
         font-size: 50px;
@@ -107,10 +116,14 @@
     .MainContent {
         flex-direction: column-reverse;
         align-items: center;
+        margin-top: 10px;
+        justify-content: start;
+        height: 1000px;
     }
     .brand {
         width: 100%;
         justify-content: center;
+        height: 250px;
     }
     .info {
         width: 90%;
@@ -131,7 +144,7 @@
     }
     .tgLogo {
         width: 200px;
-        margin-top: 0;
+        margin-top: -40px;
     }
 }
 
@@ -163,5 +176,8 @@
     }
     .info h1 {
         width: 250px;
+    }
+    .MainContent {
+        height: 1200px;
     }
 }
