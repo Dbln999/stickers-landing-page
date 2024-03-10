@@ -9,12 +9,17 @@ import Contact from "../widget/Contact/Contact.tsx";
 const MainPage = () => {
   const whyRef = useRef<HTMLHeadingElement | null>(null)
   const contactRef = useRef<HTMLHeadingElement | null>(null)
+  const howToRef = useRef<HTMLHeadingElement | null>(null)
   const executeWhyScroll = () => {
-    whyRef.current!.scrollIntoView({behavior:"smooth", block:'center'})
+    whyRef.current!.scrollIntoView({behavior:"smooth"})
   };
 
   const executeContactScroll = () => {
     contactRef.current!.scrollIntoView({behavior:"smooth"})
+  };
+
+  const executeHowToScroll = () => {
+    howToRef.current!.scrollIntoView({behavior:"smooth"})
   };
 
   return (
@@ -26,10 +31,10 @@ const MainPage = () => {
       <div className={cls.bgPurple}>
       </div>
       <Header executeContactScroll={executeContactScroll} executeScroll={executeWhyScroll}></Header>
-      <MainContent></MainContent>
+      <MainContent executeHowToScroll={executeHowToScroll}></MainContent>
       <WhyUs ref={whyRef}></WhyUs>
-      <Elevate></Elevate>
-      <HowToGetSticker />
+      <Elevate executeHowToScroll={executeHowToScroll}></Elevate>
+      <HowToGetSticker ref={howToRef}/>
       <Contact ref={contactRef}></Contact>
       {/*<Footer></Footer>*/}
     </section>

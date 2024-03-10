@@ -7,11 +7,12 @@ import {Button, ButtonSize, ButtonTheme,} from "../../components/Button/Button.t
 
 interface MainContentProps {
   className?: string;
+  executeHowToScroll: () => void
 }
 
 const points = ["Baltics #1", "High-Quality Products", "Low Prices"];
 
-export const MainContent = memo(({ className }: MainContentProps) => {
+export const MainContent = memo(({ className, executeHowToScroll }: MainContentProps) => {
   return (
       <section className={classNames(cls.MainContent, {}, [className])}>
           <section className={cls.info}>
@@ -26,7 +27,7 @@ export const MainContent = memo(({ className }: MainContentProps) => {
                   <Button size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
                       Stickersize!
                   </Button>
-                  <Button theme={ButtonTheme.CLEAR} size={ButtonSize.XL}>How to start?</Button>
+                  <Button onClick={() => executeHowToScroll()} theme={ButtonTheme.CLEAR} size={ButtonSize.XL}>How to start?</Button>
               </div>
           </section>
           <div>

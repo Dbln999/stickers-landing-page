@@ -28,11 +28,13 @@ export const Button = memo((props: ButtonProps) => {
     size = ButtonSize.L,
     theme = ButtonTheme.OUTLINE,
     children,
+    ...otherProps
   } = props;
 
   return (
     <button
       className={classNames(cls.Button, {}, [className, cls[size], cls[theme]])}
+      {...otherProps}
     >
       {children}
     </button>
