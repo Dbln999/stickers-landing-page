@@ -7,9 +7,8 @@ import HowToGetSticker from "../widget/HowToGetSticker/HowToGetSticker.tsx";
 import {useRef} from "react";
 import Contact from "../widget/Contact/Contact.tsx";
 const MainPage = () => {
-
-  const whyRef = useRef<HTMLHeadingElement>()
-  const contactRef = useRef<HTMLHeadingElement>()
+  const whyRef = useRef<HTMLHeadingElement | null>(null)
+  const contactRef = useRef<HTMLHeadingElement | null>(null)
   const executeWhyScroll = () => {
     whyRef.current!.scrollIntoView({behavior:"smooth", block:'center'})
   };

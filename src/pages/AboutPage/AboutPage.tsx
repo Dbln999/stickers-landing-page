@@ -1,5 +1,5 @@
 import cls from "./AboutPage.module.css";
-import Header from "../../widget/Header/Header.tsx";
+// import Header from "../../widget/Header/Header.tsx";
 import {Card, ImageType} from "../../components/Card/Card.tsx";
 import imgSkeleton from "../../assets/skeleton_circle.svg";
 import {Footer} from "../../widget/Footer/Footer.tsx";
@@ -14,7 +14,7 @@ const AboutPage = () => {
         alignItems: "center",
       }}
     >
-      <Header></Header>
+      {/*<Header></Header>*/}
       <h1 className={cls.about}>About</h1>
       <section className={cls.cardWrapper}>
         <Card

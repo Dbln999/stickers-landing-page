@@ -4,10 +4,11 @@ import {Card, ImageType, TextType} from "../../components/Card/Card.tsx";
 import Baltic from '../../assets/Baltic.svg'
 import Quality from '../../assets/Quality.svg'
 import Price from '../../assets/Price.svg'
-import {forwardRef, memo} from "react";
+import {ForwardedRef, forwardRef, memo} from "react";
 import Heading from "../../components/Heading/Heading.tsx";
 
-const WhyUs = memo(forwardRef((props, ref) => {
+const WhyUs = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) => {
+    const {} = props
     return (
         <section className={classNames(cls.WhyUs, {}, [])}>
             <Heading ref={ref} text={"Why us?"}></Heading>
