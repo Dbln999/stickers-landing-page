@@ -57,5 +57,6 @@
     }
     .container {
         width: 250px;
+        font-size: 16px;
     }
 }
