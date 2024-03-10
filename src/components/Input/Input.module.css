@@ -1,9 +1,24 @@
 .Input {
-    width: 320px;
     padding: 15px;
-    border: 2px black solid;
-    border-radius: 10px;
-    font-family: "Overlock", sans-serif;
+    border: 2px rgba(0, 0, 0, 0.46) solid;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
     font-weight: 500;
     font-style: normal;
+    margin: 15px 15px;
+}
+
+
+.standard {
+    width: 320px;
+}
+
+.small {
+    width: 240px;
+    height: 40px;
+    font-size: 21px;
+}
+
+.Input:focus {
+    outline: 0;
 }

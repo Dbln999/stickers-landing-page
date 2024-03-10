@@ -7,8 +7,8 @@
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     /*border-radius: 50%;*/
     /*border: 1px #9747FF solid;*/
 }
@@ -26,13 +26,13 @@
 .title {
     font-weight: 600;
     font-style: normal;
-    font-size: 32px;
+    font-size: 24px;
     margin: 15px 0;
 }
 .text {
     font-weight: 400;
     font-style: normal;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
 
 }
@@ -68,7 +68,7 @@
         width: 250px;
     }
     .text {
-        font-size: 22px;
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 1460px) {
@@ -76,7 +76,7 @@
         width: 200px;
     }
     .text {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -85,6 +85,6 @@
         width: 350px;
     }
     .text {
-        font-size: 24px;
+        font-size: 16px;
     }
 }

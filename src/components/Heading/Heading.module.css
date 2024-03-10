@@ -1,0 +1,37 @@
+.title {
+    margin-top: 80px;
+    font-size: 40px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    --b: .06em; /* border width */
+    --c: 0.6em; /* corner size */
+    --r: 0em; /* corner rounding */
+    position: relative;
+    border: solid var(--b) transparent;
+    padding: 0.3em 1em;
+}
+
+.title::before {
+    position: absolute;
+    z-index: -20;
+    inset: calc(-1*var(--b));
+    border: inherit;
+    border-radius: var(--r);
+    background: linear-gradient(180deg, rgba(179,121,255,1) 0%, rgba(109,39,200,1) 100%) border-box;
+    --corner:
+            conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0)
+            0 0/ calc(100% - var(--c))  calc(100% - var(--c)) border-box;
+    --inner: conic-gradient(rgba(179,121,255,1) 0%, rgba(109,39,200,1) 100%) padding-box;
+    -webkit-mask: var(--corner), var(--inner);
+    -webkit-mask-composite: source-out;
+    mask: var(--corner) subtract, var(--inner);
+    content: ''
+}
+
+@media only screen and (max-width: 530px) {
+    .title {
+        font-size: 25px;
+    }
+}

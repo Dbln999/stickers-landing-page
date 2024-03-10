@@ -6,9 +6,17 @@ import Instagram from "../../assets/Instagram.svg";
 import TikTok from "../../assets/TikTok.svg";
 import YouTube from "../../assets/YouTube.svg";
 import LinkedIn from "../../assets/LinkedIn.svg";
+import {memo} from "react";
 
-const Header = () => {
+interface HeaderProps {
+    executeScroll: () => void
+    executeContactScroll: () => void
+}
+
+const Header = memo(({executeScroll, executeContactScroll}: HeaderProps) => {
     const navigate = useNavigate();
+
+
     return (
         <header className={cls.Header}>
             <section className={cls.overlay}>
@@ -27,13 +35,13 @@ const Header = () => {
                         <img src={LinkedIn as string} alt=""/>
                     </div>
                     <div className={cls.links}>
-                        <p>Why us?</p>
-                        <p>Contact</p>
+                        <p onClick={() => executeScroll()}>Why us?</p>
+                        <p onClick={() => executeContactScroll()}>Contact</p>
                     </div>
                 </div>
             </section>
         </header>
     );
-};
+});
 
 export default Header;

@@ -44,7 +44,7 @@
 }
 
 .point p {
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Nunito", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -137,6 +137,7 @@
         margin-top: 150px;
         width: 500px;
         text-align: center;
+        font-size: 28px;
     }
 
     .btnContainer {

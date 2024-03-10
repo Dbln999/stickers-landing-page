@@ -22,7 +22,7 @@
     font-weight: 600;
     font-style: normal;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     color: white;
 }
 
@@ -54,6 +54,7 @@
     cursor: pointer;
 }
 
+
 @media only screen and (max-width: 900px) {
     .logo {
         width: 150px;
@@ -75,7 +76,7 @@
         margin: 10px 0;
     }
     .links {
-        margin-top: 0px;
+        margin-top: 0;
         width: 100px;
     }
 }
