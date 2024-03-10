@@ -1,13 +1,13 @@
 import {classNames} from "../../lib/classNames.ts";
 import cls from './HowToGetSticker.module.css'
-import {forwardRef, memo} from "react";
+import {ForwardedRef, forwardRef, memo} from "react";
 import Steps from "../../components/Steps/Steps.tsx";
 import firstStep from '../../assets/1 step.svg'
 import secondStep from '../../assets/2 step.svg'
 import thirdStep from '../../assets/3 step.svg'
 import Heading from "../../components/Heading/Heading.tsx";
 
-const HowToGetSticker = memo(forwardRef((props, ref) => {
+const HowToGetSticker = memo(forwardRef((props, ref:ForwardedRef<HTMLHeadingElement>) => {
     const {} = props
     return (
         <div className={classNames(cls.HowToGetSticker, {}, [])}>
