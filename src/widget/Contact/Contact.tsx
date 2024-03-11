@@ -36,7 +36,8 @@ const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) =
     );
     const sendMessage = async () => {
         console.log('trigger', message)
-        await axios.post("http://13.60.41.6/email/send", message)
+        // await axios.post("http://13.60.41.6/email/send", message)
+        await axios.post("https://9e112ff4-7dff-4e62-89f8-db81fb7d5d88-00-1r5bc502c5svq.worf.replit.dev/email/send", message)
     }
 
     return (
