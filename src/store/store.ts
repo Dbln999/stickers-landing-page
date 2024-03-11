@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { formReducer } from "./formSlice/formSlice.ts";
+import { messageReducer } from "./messageSlice/messageSlice.ts";
 
 const rootReducer = combineReducers({
   form: formReducer,
+  message: messageReducer
 });
 
 const store = configureStore({

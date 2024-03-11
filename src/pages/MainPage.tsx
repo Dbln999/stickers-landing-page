@@ -4,7 +4,7 @@ import cls from './MainPage.module.css'
 import WhyUs from "../widget/WhyUs/WhyUs.tsx";
 import Elevate from "../components/Elevate/Elevate.tsx";
 import HowToGetSticker from "../widget/HowToGetSticker/HowToGetSticker.tsx";
-import {useRef} from "react";
+import { useRef } from "react";
 import Contact from "../widget/Contact/Contact.tsx";
 const MainPage = () => {
   const whyRef = useRef<HTMLHeadingElement | null>(null)
