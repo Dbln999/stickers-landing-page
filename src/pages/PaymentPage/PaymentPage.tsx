@@ -3,7 +3,7 @@ import { InputFormWrapper } from "../../components/InputFormWrapper/InputFormWra
 import { useTelegram } from "../../hooks/useTelegram.ts";
 import { formActions } from "../../store/formSlice/formSlice.ts";
 import { useAppDispatch, useAppSelector } from "../../store/store.ts";
-
+import cls from './PaymentPage.module.css'
 const PaymentPage = () => {
   const { tg } = useTelegram();
   const dispatch = useAppDispatch();
@@ -16,8 +16,8 @@ const PaymentPage = () => {
   );
 
   const onChangeCountry = useCallback(
-    (value?: string) => {
-      dispatch(formActions.updateForm({ country: value || "" }));
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      dispatch(formActions.updateForm({ country: e.target.value || "" }));
     },
     [dispatch]
   );
@@ -79,6 +79,7 @@ const PaymentPage = () => {
   useEffect(() => {
     if (
       !form?.name ||
+      !/^[a-zA-Z\s]+$/.test(form.name) ||
       !form.email ||
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(form.email!) ||
       !form.phoneNumber ||
@@ -87,7 +88,6 @@ const PaymentPage = () => {
       !form.country ||
       !form.city
     ) {
-      console.log("validated");
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
@@ -112,10 +112,14 @@ const PaymentPage = () => {
       }}
     >
       <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
-      <InputFormWrapper
-        onChange={onChangeCountry}
-        title="Country"
-      ></InputFormWrapper>
+      <div className={cls.selectWrapper}>
+        <label htmlFor="select">Country</label>
+        <select onChange={onChangeCountry} name={"select"} className={cls.select}>
+          <option value="EE">Estonia</option>
+          <option value="LV">Latvia</option>
+          <option value="LT">Lithuania</option>
+        </select>
+      </div>
       <InputFormWrapper onChange={onChangeCity} title="City"></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangeAddress}

@@ -15,6 +15,7 @@ export const InputFormWrapper = memo((props: InputFormWrapperProps) => {
     <div className={classNames(cls.InputFormWrapper, {}, [className])}>
       <label htmlFor={title}>{title}</label>
       <Input
+        style={{margin: "0"}}
         type={type}
         onChange={onChange}
         name={title}

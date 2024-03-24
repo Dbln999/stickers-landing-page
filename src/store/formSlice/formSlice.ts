@@ -18,7 +18,7 @@ const initialState: FormSchema = {
   form: {
     name: "",
     city: "",
-    country: "",
+    country: "EE",
     address: "",
     postcode: "",
     phoneNumber: "",
