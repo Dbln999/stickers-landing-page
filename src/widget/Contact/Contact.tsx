@@ -4,7 +4,6 @@ import {classNames} from "../../lib/classNames.ts";
 import Heading from "../../components/Heading/Heading.tsx";
 import {Input, InputSize} from "../../components/Input/Input.tsx";
 import {Button, ButtonSize, ButtonTheme} from "../../components/Button/Button.tsx";
-import axios from "axios";
 import {useAppDispatch, useAppSelector} from "../../store/store.ts";
 import {messageActions} from "../../store/messageSlice/messageSlice.ts";
 
