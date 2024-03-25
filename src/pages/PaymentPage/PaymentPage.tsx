@@ -112,7 +112,7 @@ const PaymentPage = () => {
     >
       <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
       <div className={cls.selectWrapper}>
-        <label htmlFor="select">Country</label>
+        <label htmlFor="select" className={cls.countryLabel}>Country</label>
         <select onChange={onChangeCountry} name={"select"} className={cls.select}>
           <option value="EE">Estonia</option>
           <option value="LV">Latvia</option>

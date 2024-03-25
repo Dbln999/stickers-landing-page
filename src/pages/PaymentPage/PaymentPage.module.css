@@ -20,3 +20,6 @@
 .selectWrapper label {
     margin-bottom: 5px;
 }
+.countryLabel {
+    color: var(--tg-theme-text-color);
+}
