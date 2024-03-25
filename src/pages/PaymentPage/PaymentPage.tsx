@@ -7,7 +7,6 @@ import cls from './PaymentPage.module.css'
 const PaymentPage = () => {
   const { tg } = useTelegram();
   const dispatch = useAppDispatch();
-
   const onChangeCity = useCallback(
     (value?: string) => {
       dispatch(formActions.updateForm({ city: value || "" }));
@@ -132,8 +131,8 @@ const PaymentPage = () => {
       ></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangePhoneNumber}
-        title="Phone number"
-        type="number"
+        title="Phone number (with country code)"
+        type="tel"
       ></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangeEmail}
