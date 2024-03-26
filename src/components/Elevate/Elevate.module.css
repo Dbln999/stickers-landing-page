@@ -50,11 +50,19 @@ p {
 @media only screen and (max-width: 650px) {
 
     .btnContainer {
-        width: 350px;
+        width: 450px;
     }
 
     .btnContainer button {
         margin: 10px 0;
     }
+
+}
+@media only screen and (max-width: 450px) {
+
+    .btnContainer {
+        width: 250px;
+    }
+
 
 }
