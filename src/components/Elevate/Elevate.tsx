@@ -15,7 +15,7 @@ const Elevate = memo(({executeHowToScroll} : ElevateProps) => {
             <p>Test Our Service and Form Your Own Opinion</p>
             <div className={cls.btnContainer}>
                 <Button size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
-                    Stickersize!
+                    Stickerize!
                 </Button>
                 <Button onClick={executeHowToScroll} theme={ButtonTheme.OUTLINE} size={ButtonSize.XL}>How to start?</Button>
             </div>

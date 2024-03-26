@@ -12,6 +12,7 @@ h1 {
     font-style: normal;
     font-size: 36px;
     color: black;
+    text-align: center;
 }
 p {
     font-family: "Nunito", sans-serif;
@@ -19,12 +20,13 @@ p {
     font-style: normal;
     font-size: 24px;
     color: black;
+    margin-top: 30px;
 }
 .btnContainer {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 600px;
 }
 
 .btnContainer button {
@@ -37,6 +39,18 @@ p {
         flex-direction: column;
         align-items: center;
         width: 200px;
+    }
+
+    .btnContainer button {
+        margin: 10px 0;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .btnContainer {
+        width: 350px;
     }
 
     .btnContainer button {

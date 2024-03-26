@@ -25,7 +25,7 @@ export const MainContent = memo(({ className, executeHowToScroll }: MainContentP
               ))}
               <div className={cls.btnContainer}>
                   <Button size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
-                      Stickersize!
+                      Stickerize!
                   </Button>
                   <Button onClick={executeHowToScroll} theme={ButtonTheme.CLEAR} size={ButtonSize.XL}>How to start?</Button>
               </div>
