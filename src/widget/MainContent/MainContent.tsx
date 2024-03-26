@@ -24,7 +24,7 @@ export const MainContent = memo(({ className, executeHowToScroll }: MainContentP
                   </div>
               ))}
               <div className={cls.btnContainer}>
-                  <Button size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
+                  <Button onClick={() => window.open("https://t.me/Telesticksbot")} size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
                       Stickerize!
                   </Button>
                   <Button onClick={executeHowToScroll} theme={ButtonTheme.CLEAR} size={ButtonSize.XL}>How to start?</Button>

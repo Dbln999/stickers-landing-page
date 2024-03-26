@@ -17,7 +17,7 @@ const Steps = memo((props: StepsProps) => {
             <img src={image} className={cls.image} alt=""/>
             <div className={cls.wrapper}>
                 <div className={cls.container}>{text}</div>
-                {button && <Button size={ButtonSize.XL} className={cls.btn} theme={ButtonTheme.BACKGROUND}>Telegram Bot</Button>}
+                {button && <Button onClick={() => window.open("https://t.me/Telesticksbot")} size={ButtonSize.XL} className={cls.btn} theme={ButtonTheme.BACKGROUND}>Telegram Bot</Button>}
             </div>
         </div>
     );

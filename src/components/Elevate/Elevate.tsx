@@ -14,7 +14,7 @@ const Elevate = memo(({executeHowToScroll} : ElevateProps) => {
             <h1>Elevate Your Experience any time</h1>
             <p>Test Our Service and Form Your Own Opinion</p>
             <div className={cls.btnContainer}>
-                <Button size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
+                <Button onClick={() => window.open("https://t.me/Telesticksbot")} size={ButtonSize.XL} theme={ButtonTheme.BACKGROUND}>
                     Stickerize!
                 </Button>
                 <Button onClick={executeHowToScroll} theme={ButtonTheme.OUTLINE} size={ButtonSize.XL}>How to start?</Button>
