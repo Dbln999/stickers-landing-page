@@ -6,7 +6,7 @@ import {Input, InputSize} from "../../components/Input/Input.tsx";
 import {Button, ButtonSize, ButtonTheme} from "../../components/Button/Button.tsx";
 import {useAppDispatch, useAppSelector} from "../../store/store.ts";
 import {messageActions} from "../../store/messageSlice/messageSlice.ts";
-import * as axios from "axios";
+import axios from "axios";
 
 const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) => {
     const {} = props
