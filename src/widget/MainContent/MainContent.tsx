@@ -16,7 +16,7 @@ export const MainContent = memo(({ className, executeHowToScroll }: MainContentP
   return (
       <section className={classNames(cls.MainContent, {}, [className])}>
           <section className={cls.info}>
-              <h1>Express yourself beyond the chat with Telegram stickers you can hold.</h1>
+              <h1 style={{textAlign:"left"}}>Express yourself beyond the chat with Telegram stickers you can hold.</h1>
               {points.map((point) => (
                   <div key={point} className={cls.point}>
                       <img src={Star as string} alt=""/>

@@ -153,7 +153,6 @@
     .info h1 {
         margin-top: 150px;
         width: 500px;
-        text-align: center;
         font-size: 28px;
     }
 
@@ -167,6 +166,9 @@
     }
     .btnContainer button {
         width: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
