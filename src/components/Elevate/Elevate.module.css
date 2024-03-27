@@ -55,6 +55,7 @@ p {
 
     .btnContainer button {
         margin: 10px 0;
+        width: 200px;
     }
 
 }
@@ -62,6 +63,7 @@ p {
 
     .btnContainer {
         width: 250px;
+        margin-bottom: 20px;
     }
 
 

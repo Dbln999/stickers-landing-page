@@ -63,3 +63,8 @@
 
 }
 
+@media only screen and (max-width: 530px) {
+  .wrapper {
+      margin-top: 10px;
+  }
+}
