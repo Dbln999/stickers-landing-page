@@ -42,15 +42,18 @@ const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) =
         // await axios.post("https://9e112ff4-7dff-4e62-89f8-db81fb7d5d88-00-1r5bc502c5svq.worf.replit.dev/email/send", message)
     }
 
+    const email = useAppSelector(state => state.message.email)
+    const name = useAppSelector(state => state.message.name)
+
     return (
         <section className={classNames(cls.Contact, {}, [])}>
             <Heading ref={ref} text={"Contact us"}></Heading>
             <div className={cls.wrapper}>
                 <div className={cls.inputWrapper}>
-                    <Input onChange={onChangeName} placeholder={"Name"} size={InputSize.SMALL}></Input>
-                    <Input onChange={onChangeEmail} placeholder={"Email"} size={InputSize.SMALL}></Input>
+                    <Input onChange={onChangeName} value={name} placeholder={"Name"} size={InputSize.SMALL}></Input>
+                    <Input onChange={onChangeEmail} value={email} placeholder={"Email"} size={InputSize.SMALL}></Input>
                 </div>
-                <textarea onChange={onChangeMessage} placeholder={"Message"} className={cls.textarea}></textarea>
+                <textarea onChange={onChangeMessage} value={message} placeholder={"Message"} className={cls.textarea}></textarea>
                 <Button onClick={sendMessage} className={cls.btns} theme={ButtonTheme.BLACK} size={ButtonSize.XL}>Send</Button>
                 <p className={cls.or}>or</p>
                 <Button className={cls.btns} theme={ButtonTheme.BACKGROUND} size={ButtonSize.XL}>Start Yourself</Button>
