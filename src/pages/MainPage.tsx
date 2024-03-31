@@ -6,6 +6,7 @@ import Elevate from "../components/Elevate/Elevate.tsx";
 import HowToGetSticker from "../widget/HowToGetSticker/HowToGetSticker.tsx";
 import { useRef } from "react";
 import Contact from "../widget/Contact/Contact.tsx";
+import {Footer} from "../widget/Footer/Footer.tsx";
 const MainPage = () => {
   const whyRef = useRef<HTMLHeadingElement | null>(null)
   const contactRef = useRef<HTMLHeadingElement | null>(null)
@@ -36,7 +37,7 @@ const MainPage = () => {
       <Elevate executeHowToScroll={executeHowToScroll}></Elevate>
       <HowToGetSticker ref={howToRef}/>
       <Contact ref={contactRef}></Contact>
-      {/*<Footer></Footer>*/}
+      <Footer></Footer>
     </section>
   );
 };

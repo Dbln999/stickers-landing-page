@@ -14,13 +14,13 @@ interface FooterProps {
 export const Footer = memo(({ className }: FooterProps) => {
   return (
     <section className={classNames(cls.Footer, {}, [className])}>
-      <img className={cls.logo} src={Logo} alt="" />
-      <div className={cls.socials}>
-        <img src={Facebook} alt="" />
-        <img src={Instagram} alt="" />
-        <img src={TikTok} alt="" />
-        <img src={YouTube} alt="" />
-        <img src={LinkedIn} alt="" />
+      <div className={cls.footer}>
+          <p>
+              © 2024 Telestickers OÜ | telestickers.ee ™
+          </p>
+          <p>
+              Sellel lehel avaldatud materjali ilma loata kasutamine ja levitamine on keelatud.
+          </p>
       </div>
     </section>
   );
