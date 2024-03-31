@@ -38,12 +38,10 @@ const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) =
         await axios.post("https://telestickers-lbdc5wdmna-lz.a.run.app/api/email/send", message)
         dispatch(messageActions.updateForm({ message: "", name: "", email: "" }));
 
-        // await axios.post("http://13.60.41.6/email/send", message)
-        // await axios.post("https://9e112ff4-7dff-4e62-89f8-db81fb7d5d88-00-1r5bc502c5svq.worf.replit.dev/email/send", message)
     }
 
-    const email = useAppSelector(state => state.message.email)
-    const name = useAppSelector(state => state.message.name)
+    // const email = useAppSelector(state => state.message.email)
+    // const name = useAppSelector(state => state.message.name)
 
     return (
         <section className={classNames(cls.Contact, {}, [])}>
