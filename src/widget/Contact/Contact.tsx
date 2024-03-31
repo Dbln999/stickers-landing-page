@@ -1,4 +1,4 @@
-import {ChangeEvent, ForwardedRef, forwardRef, memo, useCallback} from "react";
+import {ChangeEvent, ForwardedRef, forwardRef, memo, useCallback, useState} from "react";
 import cls from './Contact.module.css'
 import {classNames} from "../../lib/classNames.ts";
 import Heading from "../../components/Heading/Heading.tsx";
@@ -13,16 +13,21 @@ const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) =
 
     const message = useAppSelector(state => state.message?.message)
     const dispatch = useAppDispatch()
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [text, setText] = useState("")
 
     const onChangeEmail = useCallback(
         (value?: string) => {
+            setEmail(value!)
             dispatch(messageActions.updateForm({ email: value || "" }));
         },
         [dispatch]
     );
 
-    const onChangeName= useCallback(
+    const onChangeName = useCallback(
         (value?: string) => {
+            setName(value!)
             dispatch(messageActions.updateForm({ name: value || "" }));
         },
         [dispatch]
@@ -30,28 +35,30 @@ const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) =
 
     const onChangeMessage = useCallback(
         (e: ChangeEvent<HTMLTextAreaElement>) => {
+            setText(e.target.value!)
             dispatch(messageActions.updateForm({ message: e.target.value || "" }));
         },
         [dispatch]
     );
     const sendMessage = async () => {
+        setName("")
+        setText("")
+        setEmail("")
         await axios.post("https://telestickers-lbdc5wdmna-lz.a.run.app/api/email/send", message)
         dispatch(messageActions.updateForm({ message: "", name: "", email: "" }));
 
     }
 
-    // const email = useAppSelector(state => state.message.email)
-    // const name = useAppSelector(state => state.message.name)
 
     return (
         <section className={classNames(cls.Contact, {}, [])}>
             <Heading ref={ref} text={"Contact us"}></Heading>
             <div className={cls.wrapper}>
                 <div className={cls.inputWrapper}>
-                    <Input onChange={onChangeName} placeholder={"Name"} size={InputSize.SMALL}></Input>
-                    <Input onChange={onChangeEmail} placeholder={"Email"} size={InputSize.SMALL}></Input>
+                    <Input onChange={onChangeName} value={name} placeholder={"Name"} size={InputSize.SMALL}></Input>
+                    <Input onChange={onChangeEmail} value={email} placeholder={"Email"} size={InputSize.SMALL}></Input>
                 </div>
-                <textarea onChange={onChangeMessage} placeholder={"Message"} className={cls.textarea}></textarea>
+                <textarea onChange={onChangeMessage} value={text} placeholder={"Message"} className={cls.textarea}></textarea>
                 <Button onClick={sendMessage} className={cls.btns} theme={ButtonTheme.BLACK} size={ButtonSize.XL}>Send</Button>
                 <p className={cls.or}>or</p>
                 <Button className={cls.btns} theme={ButtonTheme.BACKGROUND} size={ButtonSize.XL}>Start Yourself</Button>
