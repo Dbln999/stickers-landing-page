@@ -110,7 +110,7 @@ const PaymentPage = () => {
         background: "var(--tg-theme-bg-color)",
       }}
     >
-      <InputFormWrapper onChange={onChangeName} title="Name"></InputFormWrapper>
+      <InputFormWrapper onChange={onChangeName} title="Name (Ex. Alex Norris)"></InputFormWrapper>
       <div className={cls.selectWrapper}>
         <label htmlFor="select" className={cls.countryLabel}>Country</label>
         <select onChange={onChangeCountry} name={"select"} className={cls.select}>
@@ -119,6 +119,11 @@ const PaymentPage = () => {
           <option value="LT">Lithuania</option>
         </select>
       </div>
+      <InputFormWrapper
+          onChange={onChangeEmail}
+          title="Email"
+          type="email"
+      ></InputFormWrapper>
       <InputFormWrapper onChange={onChangeCity} title="City"></InputFormWrapper>
       <InputFormWrapper
         onChange={onChangeAddress}
@@ -133,11 +138,6 @@ const PaymentPage = () => {
         onChange={onChangePhoneNumber}
         title="Phone number (with country code)"
         type="tel"
-      ></InputFormWrapper>
-      <InputFormWrapper
-        onChange={onChangeEmail}
-        title="Email"
-        type="email"
       ></InputFormWrapper>
     </div>
   );

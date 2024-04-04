@@ -159,6 +159,7 @@
     .btnContainer {
         width: 500px;
         align-self: center;
+        justify-content: space-evenly;
     }
     .tgLogo {
         width: 200px;
@@ -183,6 +184,7 @@
         width: 350px;
     }
     .btnContainer {
+        justify-content: space-between;
         width: 350px;
     }
 }

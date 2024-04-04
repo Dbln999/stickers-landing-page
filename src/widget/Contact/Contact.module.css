@@ -51,11 +51,20 @@
     margin: 10px 0;
 }
 
-@media only screen and (max-width: 900px) {
-
+@media only screen and (max-width: 1100px) {
     .inputWrapper {
         align-items: center;
         flex-direction: column;
+    }
+    .inputWrapper input {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .inputWrapper input {
+        width: 274px;
     }
 
     .textarea {
