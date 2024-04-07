@@ -59,7 +59,7 @@
 }
 
 .Card:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 @media only screen and (max-width: 1900px) {
