@@ -35,6 +35,10 @@
     outline: none;
 }
 
+.textarea:hover {
+    border: 2px rgba(0, 0, 0, 0.78) solid;
+}
+
 .btns {
     font-family: "Nunito", sans-serif;
     font-weight: 700;

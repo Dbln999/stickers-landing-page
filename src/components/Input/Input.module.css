@@ -22,3 +22,7 @@
 .Input:focus {
     outline: 0;
 }
+
+.Input:hover {
+    border: 2px rgba(0, 0, 0, 0.78) solid;
+}
