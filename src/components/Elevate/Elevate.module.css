@@ -33,6 +33,13 @@ p {
     border-radius: 8px;
 }
 
+.btnContainer button:nth-child(1):hover {
+    filter: brightness(120%);
+}
+.btnContainer button:nth-child(2):hover {
+    background: #f4f4f4;
+}
+
 @media only screen and (max-width: 530px) {
 
     .btnContainer {

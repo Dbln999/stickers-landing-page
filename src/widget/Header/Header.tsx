@@ -16,7 +16,6 @@ interface HeaderProps {
 const Header = memo(({executeScroll, executeContactScroll}: HeaderProps) => {
     const navigate = useNavigate();
 
-
     return (
         <header className={cls.Header}>
             <section className={cls.overlay}>

@@ -8,6 +8,10 @@
     font-style: normal;
 }
 
+.Button:active {
+    transform: translateY(3px);
+}
+
 .size-m {
     width: 80px;
     font-size: 12px;

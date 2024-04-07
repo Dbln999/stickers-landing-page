@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     margin: 50px;
+    transition: 0.5s;
 }
 
 .image {
@@ -55,6 +56,10 @@
 .smaller-size.image {
     width: 150px;
     height: 150px;
+}
+
+.Card:hover {
+    transform: scale(1.5);
 }
 
 @media only screen and (max-width: 1900px) {

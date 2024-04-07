@@ -9,7 +9,37 @@
 .logo {
     cursor: pointer;
     width: 200px;
+    animation: roll-in-left 2s ease forwards;
+    filter: drop-shadow(0 0 15px #ffffff);
 }
+
+.logo:hover {
+    filter: invert(1);
+}
+
+@keyframes roll-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes roll-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
 
 .overlay {
     width: 100%;
@@ -37,12 +67,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: roll-in-right 2s ease;
 }
 
 .socials img {
     width: 60px;
     height: 60px;
     cursor: pointer;
+}
+
+.socials img:hover {
+    filter: brightness(20%);
 }
 
 .links {
@@ -52,8 +87,12 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    animation: roll-in-right 2s ease;
 }
 
+.links p:hover {
+    transform: scale(1.1);
+}
 
 @media only screen and (max-width: 900px) {
     .logo {

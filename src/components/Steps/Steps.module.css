@@ -33,6 +33,10 @@
     margin-top: 10px;
 }
 
+.btn:hover {
+    filter: brightness(120%);
+}
+
 @media only screen and (max-width: 1475px){
     .Steps {
         width: 90%;

@@ -10,6 +10,7 @@
 .info {
     width: 550px;
     margin-top: 60px;
+    animation: roll-in-left 2s ease;
 }
 
 .info h1 {
@@ -19,6 +20,28 @@
     font-size: 32px;
     margin-bottom: 20px;
     color: white;
+}
+
+@keyframes roll-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes roll-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .phrase{
@@ -58,6 +81,7 @@
     align-items: center;
     width: 60%;
     height: 400px;
+    animation: roll-in-right 2s ease;
 }
 
 .btnContainer {
@@ -71,13 +95,30 @@
     border-radius: 8px;
 }
 
+.btnContainer button:nth-child(2):hover {
+    filter: brightness(90%);
+}
+.btnContainer button:nth-child(1):hover {
+    filter: brightness(130%);
+}
+
 .tgLogo {
     position: absolute;
     left:50%;
     transform: translateX(-50%);
     width: 350px;
+    animation: fly 2s ease-out;
+
 }
 
+@keyframes fly {
+    from {
+        transform: translateX(-300%) translateY(700px);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 @media only screen and (max-width: 1475px){
     .MainContent {
