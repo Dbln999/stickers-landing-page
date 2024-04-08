@@ -1,4 +1,4 @@
-import {memo} from "react";
+import {memo, useEffect, useState} from "react";
 import cls from "./MainContent.module.css";
 import {classNames} from "../../lib/classNames.ts";
 import TgLogo from '../../assets/Telegram Logo.png'
@@ -13,6 +13,15 @@ interface MainContentProps {
 const points = ["Baltics #1", "High-Quality Products", "Low Prices"];
 
 export const MainContent = memo(({ className, executeHowToScroll }: MainContentProps) => {
+
+    const [fly, setFly] = useState(cls.fly)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setFly(cls.flyInf)
+        }, 2500)
+    }, [])
+
   return (
       <section className={classNames(cls.MainContent, {}, [className])}>
           <section className={cls.info}>
@@ -31,7 +40,7 @@ export const MainContent = memo(({ className, executeHowToScroll }: MainContentP
               </div>
           </section>
           <div>
-            <img src={TgLogo as string} className={cls.tgLogo} alt=""/>
+            <img src={TgLogo as string} className={cls.tgLogo + " " + fly} alt=""/>
           </div>
           <div className={cls.brand}>
               <h1 className={cls.phrase}>Bring Your Telegram Stickers to life.</h1>

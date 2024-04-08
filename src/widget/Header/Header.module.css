@@ -10,11 +10,11 @@
     cursor: pointer;
     width: 200px;
     animation: roll-in-left 2s ease forwards;
-    filter: drop-shadow(0 0 15px #ffffff);
+    /*filter: drop-shadow(0 0 15px #ffffff);*/
 }
 
 .logo:hover {
-    filter: invert(1);
+    filter: invert(0.15);
 }
 
 @keyframes roll-in-left {
