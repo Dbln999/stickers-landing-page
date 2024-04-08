@@ -59,7 +59,7 @@ const Contact = memo(forwardRef((props, ref: ForwardedRef<HTMLHeadingElement>) =
                     <Input onChange={onChangeEmail} value={email} placeholder={"Email"} size={InputSize.SMALL}></Input>
                 </div>
                 <textarea onChange={onChangeMessage} value={text} placeholder={"Message"} className={cls.textarea}></textarea>
-                <Button onClick={sendMessage} className={cls.btns + " " + cls.firstBtn} theme={ButtonTheme.BLACK} size={ButtonSize.XL}>Send</Button>
+                <Button onClick={sendMessage} style={{marginTop:"20px"}} className={cls.btns + " " + cls.firstBtn} theme={ButtonTheme.BLACK} size={ButtonSize.XL}>Send</Button>
                 <p className={cls.or}>or</p>
                 <Button className={cls.btns  + " " + cls.secondBtn} onClick={() => window.open("https://t.me/Telesticksbot")} theme={ButtonTheme.BACKGROUND} size={ButtonSize.XL}>Start Yourself</Button>
             </div>
