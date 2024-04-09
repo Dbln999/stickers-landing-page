@@ -29,7 +29,8 @@
     margin: 10px 0;
     width: 92%;
     font-size: 21px;
-    height: 150px;
+    min-height: 150px;
+    resize: vertical;
 }
 .textarea:focus {
     outline: none;
